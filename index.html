@@ -4,72 +4,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abirol Spritz 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body, html {
-            height: 100%;
+        /* Smooth Scrolling für die Navigation */
+        html { scroll-behavior: smooth; height: 100%; overflow: hidden; }
+
+        body {
             margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: 'Arial Black', sans-serif;
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1a1a1a;
             color: white;
+            height: 100%;
+            overflow: hidden;
         }
 
-        .bg-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hintergrund.jpg');
-            height: 100vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            
-            /* Zentriert alles vertikal und horizontal */
+        /* Navigationsleiste */
+        nav {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+            transition: background 0.3s ease, color 0.12s ease, text-shadow 0.3s ease, transform 0.12s ease;
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+            color: #fff;
+        }
+
+        nav a:active {
+            transform: scale(0.95);
+            text-shadow: 0 0 25px rgba(255, 165, 0, 1);
+        }
+
+        /* Nav hover: brighten border and add subtle outer glow */
+        nav:hover {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Home Sektion - absolute full-screen layer */
+        .hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('hintergrund.jpg') center center / cover no-repeat fixed;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            /* Allow the scaled logo to overflow without being clipped */
-            overflow: visible;
+            padding: 60px 20px 140px 20px; /* large spacing under hero */
         }
 
         .logo {
-            /* Scale the displayed image 5x relative to its current rendered size */
-            width: min(80vw, 1100px);
-            max-height: 40vh;
+            position: fixed;
+            top: -4px;
+            left: 4px;
+            margin: 0;
+            width: min(20vw, 200px);
+            max-width: 180px;
             height: auto;
             object-fit: contain;
-            margin-bottom: 20px;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            /* Move the logo upward (responsive). Adjust the vh value if you want it higher/lower */
-            position: relative;
-            top: -25vh;
-            transform: scale(5);
+            transform: scale(2.2);
             transform-origin: center top;
-            will-change: transform;
-            /* Keep vector images crisp; harmless for SVG, ignored for raster formats */
-            image-rendering: -webkit-optimize-contrast;
+            z-index: 2000;
+            filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.4));
             image-rendering: crisp-edges;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(2.32);
         }
 
         h1 {
-            /* Scales between a comfortable small and large size */
-            font-size: clamp(3.5rem, 9vw, 11rem);
-            text-transform: uppercase;
+            font-size: 4rem;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.45);
+            margin: 0 0 16px 0;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            margin: 24px 0 0 0;
+            opacity: 1;
+            color: #FFB84D;
+            text-shadow: 0 0 25px rgba(255, 140, 0, 0.9), 
+                         0 0 40px rgba(255, 140, 0, 0.6),
+                         0 0 60px rgba(255, 165, 0, 0.4),
+                         2px 2px 10px rgba(0,0,0,0.6);
+        }
+        .subtitle {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.92);
+        }
+
+        /* Finanz-Sektion - absolute full-screen layer (hidden by default) */
+        .finance-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            padding: 140px 20px 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Strand.jpeg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        /* Neue Sektionen - gleiche Basis-Styling */
+        .content-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            padding: 140px 20px 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hintergrund.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow-y: auto;
+        }
+
+        .content-section h2 {
+            color: #FFB84D;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
+        }
+
+        .content-box {
+            max-width: 900px;
+            width: 90%;
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(20px) saturate(120%);
+            -webkit-backdrop-filter: blur(20px) saturate(120%);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 30px;
+            margin: 20px 0;
+            color: #fff;
+            line-height: 1.8;
+        }
+        /* Utility to hide sections */
+        .hidden { display: none; }
+
+        .glass-container {
+            width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(20px) saturate(120%);
+            -webkit-backdrop-filter: blur(20px) saturate(120%);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 0;
+            box-shadow: none;
+            overflow: hidden;
+        }
+
+        /* Der Iframe-Fix */
+        /* Clip the iframe to show only up to a given number of rows (default: 8)
+           Adjust --row-height if the rows appear too tall/short. */
+        .sheet-wrapper {
+            width: 100%;
+            height: 280px; /* mask height to hide white area under the table */
+            overflow: hidden;
+            border-radius: 0;
+            position: relative;
+        }
+
+        iframe {
+            width: 100%;
+            /* make iframe taller than the clip so content can be cropped */
+            height: 1200px;
+            border: none;
             margin: 0;
-            /* Pull the title up a bit closer to the logo */
-            margin-top: -6vh;
-            line-height: 0.9;
-            text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+            border-radius: 0;
+            box-shadow: none;
+            background: transparent;
+            display: block;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-        <div class="bg-image">
-        <img src="logo.svg" alt="Logo" class="logo">
-        <h1>Abirol<br>Spritz<br>2027</h1>
-    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#finanzen">Finanzen</a>
+        <a href="#punktesystem">Punktesystem</a>
+        <a href="#eltern">Infos für die Eltern</a>
+        <a href="#abibuch">Abibuch</a>
+        <a href="#abipulli">Abipulli</a>
+        <a href="#links">Links</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <a id="logo-link" href="https://example.com" target="_blank" rel="noopener" style="display:inline-block;line-height:0;">
+            <img src="logo.svg" alt="Logo" class="logo">
+        </a>
+        <h1>ABIROL SPRITZ 2027</h1>
+        <p class="subtitle">Das EMMA-Herwegh-Gymnasium feiert bald ihr Abi!</p>
+    </section>
+
+    <section id="finanzen" class="finance-section hidden">
+        <h2 style="color: orange; margin-bottom: 30px;">Live-Finanzplan</h2>
+        <div class="glass-container">
+            <div class="sheet-wrapper">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTEgOcHPkc6DcCNvxuBQFfI8vQRuv201uYDttPudvaZt0ukbqQ_Mp2vNYdiNZXo9L7-4CrXzwQFP72q/pubhtml?widget=false&headers=false&rm=minimal&chrome=false"></iframe>
+            </div>
+        </div>
+        <p style="margin-top: 20px; color: #888; font-size: 0.8rem;">Daten werden automatisch alle paar Minuten aktualisiert.</p>
+        <p style="margin-top:10px;">
+            <a href="https://docs.google.com/spreadsheets/d/1aDYyBYipAWyRictybtvUlUXgxRpPxcWzZA_ZjKltc24" target="_blank" rel="noopener" style="display:inline-block;padding:10px 14px;border-radius:8px;background:rgba(255,165,0,0.12);color:#fff;text-decoration:none;font-weight:600;">Spreadsheet öffnen</a>
+        </p>
+    </section>
+
+    <section id="punktesystem" class="content-section hidden">
+        <h2>Punktesystem</h2>
+        <div class="content-box">
+            <p>Hier kommt das Punktesystem für das Abi 2027.</p>
+            <p>Inhalt folgt...</p>
+        </div>
+    </section>
+
+    <section id="eltern" class="content-section hidden">
+        <h2>Infos für die Eltern</h2>
+        <div class="content-box">
+            <p>Wichtige Informationen für die Eltern.</p>
+            <p>Inhalt folgt...</p>
+        </div>
+    </section>
+
+    <section id="abibuch" class="content-section hidden">
+        <h2>Abibuch</h2>
+        <div class="content-box">
+            <p>Informationen zum Abibuch.</p>
+            <p>Inhalt folgt...</p>
+        </div>
+    </section>
+
+    <section id="abipulli" class="content-section hidden">
+        <h2>Abipulli</h2>
+        <div class="content-box">
+            <p>Informationen zum Abipulli.</p>
+            <p>Inhalt folgt...</p>
+        </div>
+    </section>
+
+    <section id="links" class="content-section hidden">
+        <h2>Links</h2>
+        <div class="content-box">
+            <p>Nützliche Links für das Abi 2027.</p>
+            <p>Inhalt folgt...</p>
+        </div>
+    </section>
 
 </body>
+    <script>
+        // Simple view switcher: show target section, hide others
+        (function(){
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            function showSection(id){
+                document.querySelectorAll('section').forEach(s=>{
+                    if(s.id === id) s.classList.remove('hidden'); else s.classList.add('hidden');
+                });
+            }
+            navLinks.forEach(a=>{
+                a.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const hash = this.getAttribute('href');
+                    if(!hash || hash === '#') return;
+                    const id = hash.slice(1);
+                    showSection(id);
+                });
+            });
+        })();
+    </script>
 </html>
