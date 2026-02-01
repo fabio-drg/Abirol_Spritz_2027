@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abirol Spritz 2027</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial Black', sans-serif;
+            color: white;
+        }
+
+        .bg-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hintergrund.jpg');
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            /* Zentriert alles vertikal und horizontal */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Allow the scaled logo to overflow without being clipped */
+            overflow: visible;
+        }
+
+        .logo {
+            /* Scale the displayed image 5x relative to its current rendered size */
+            width: min(80vw, 1100px);
+            max-height: 40vh;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* Move the logo upward (responsive). Adjust the vh value if you want it higher/lower */
+            position: relative;
+            top: -25vh;
+            transform: scale(5);
+            transform-origin: center top;
+            will-change: transform;
+            /* Keep vector images crisp; harmless for SVG, ignored for raster formats */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        h1 {
+            /* Scales between a comfortable small and large size */
+            font-size: clamp(3.5rem, 9vw, 11rem);
+            text-transform: uppercase;
+            margin: 0;
+            /* Pull the title up a bit closer to the logo */
+            margin-top: -6vh;
+            line-height: 0.9;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+        }
+    </style>
 </head>
 <body>
-    <h1>Prost! Die Website ist online.</h1>
-    <p>Erstellt von fabio-drg</p>
+
+        <div class="bg-image">
+        <img src="logo.svg" alt="Logo" class="logo">
+        <h1>Abirol<br>Spritz<br>2027</h1>
+    </div>
+
 </body>
 </html>
