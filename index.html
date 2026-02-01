@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         /* Smooth Scrolling für die Navigation */
-        html { scroll-behavior: smooth; height: 100%; overflow: hidden; }
+        html { scroll-behavior: smooth; height: 100%; overflow: auto; }
 
         body {
             margin: 0;
@@ -16,7 +16,7 @@
             background-color: #1a1a1a;
             color: white;
             height: 100%;
-            overflow: hidden;
+            overflow: auto;
         }
 
         /* Navigationsleiste */
@@ -80,7 +80,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px 20px 140px 20px; /* large spacing under hero */
+            padding: 60px 20px 80px 20px; /* large spacing with room for footer */
+            overflow-y: auto;
         }
 
         .logo {
@@ -125,6 +126,84 @@
                          0 0 60px rgba(255, 165, 0, 0.4),
                          2px 2px 10px rgba(0,0,0,0.6);
         }
+
+        .cta-button {
+            margin-top: 40px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 100, 0, 0.9));
+            color: #fff;
+            border: 2px solid rgba(255, 165, 0, 0.6);
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 24px rgba(255, 140, 0, 0.4),
+                        0 0 40px rgba(255, 140, 0, 0.3);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 32px rgba(255, 140, 0, 0.6),
+                        0 0 60px rgba(255, 140, 0, 0.5);
+            background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 120, 0, 1));
+            border-color: rgba(255, 165, 0, 0.9);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,165,0,0.3);
+            border-radius: 12px;
+            padding: 15px 20px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FFB84D;
+            text-shadow: 0 0 20px rgba(255, 140, 0, 0.7);
+            display: block;
+        }
+
+        .countdown-text {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
         .subtitle {
             font-family: 'Montserrat', Arial, sans-serif;
             font-size: 1.1rem;
@@ -142,14 +221,14 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            padding: 140px 20px 60px 20px;
+            padding: 140px 20px 80px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Strand.jpeg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hintergrund_neu.jpg');
             background-size: cover;
             background-position: center;
-            overflow: hidden;
+            overflow-y: auto;
         }
         /* Neue Sektionen - gleiche Basis-Styling */
         .content-section {
@@ -188,6 +267,35 @@
             margin: 20px 0;
             color: #fff;
             line-height: 1.8;
+        }
+
+        /* Fixed Impressum Footer */
+        .impressum {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            z-index: 1500;
+        }
+
+        .impressum a {
+            color: rgba(255,165,0,0.9);
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.2s ease;
+        }
+
+        .impressum a:hover {
+            color: rgba(255,165,0,1);
+            text-decoration: underline;
         }
         /* Utility to hide sections */
         .hidden { display: none; }
@@ -243,11 +351,34 @@
     </nav>
 
     <section id="home" class="hero">
-        <a id="logo-link" href="https://example.com" target="_blank" rel="noopener" style="display:inline-block;line-height:0;">
+        <a id="logo-link" href="https://www.ema-rs.de" target="_blank" rel="noopener" style="display:inline-block;line-height:0;">
             <img src="logo.svg" alt="Logo" class="logo">
         </a>
         <h1>ABIROL SPRITZ 2027</h1>
         <p class="subtitle">Das EMMA-Herwegh-Gymnasium feiert bald ihr Abi!</p>
+        <a href="#" class="cta-button">Jetzt Tickets reservieren!</a>
+        
+        <div class="countdown-container">
+            <div class="countdown-label">Countdown bis zum Abi</div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-text">Tage</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-text">Stunden</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-text">Minuten</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-text">Sekunden</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="finanzen" class="finance-section hidden">
@@ -303,6 +434,12 @@
         </div>
     </section>
 
+    <footer class="impressum">
+        <span>© 2027 ABIROL SPRITZ - EMMA-Herwegh-Gymnasium</span>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+    </footer>
+
 </body>
     <script>
         // Simple view switcher: show target section, hide others
@@ -322,6 +459,37 @@
                     showSection(id);
                 });
             });
+        })();
+
+        // Countdown to 07.07.2027
+        (function(){
+            const targetDate = new Date('2027-07-07T00:00:00').getTime();
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                if (distance < 0) {
+                    document.getElementById('days').textContent = '0';
+                    document.getElementById('hours').textContent = '0';
+                    document.getElementById('minutes').textContent = '0';
+                    document.getElementById('seconds').textContent = '0';
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            }
+            
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
         })();
     </script>
 </html>
