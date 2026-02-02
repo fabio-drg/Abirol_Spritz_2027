@@ -105,9 +105,9 @@
         }
 
         .subtitle {
-            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: clamp(1rem, 4vw, 1.4rem);
-            font-weight: 400;
+            font-weight: 300;
             letter-spacing: 1.2px;
             margin: 24px 0 0 0;
             opacity: 1;
@@ -117,7 +117,17 @@
             text-shadow: 0 0 25px rgba(255, 140, 0, 0.9), 
                          0 0 40px rgba(255, 140, 0, 0.6),
                          0 0 60px rgba(255, 165, 0, 0.4),
-                         2px 2px 10px rgba(0,0,0,0.6);
+                         2px 2px 10px rgba(0,0,0,0.6),
+                         0 4px 20px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 15px 30px;
+            display: inline-block;
+            border: 1px solid rgba(255, 165, 0, 0.3);
         }
 
         .cta-button {
@@ -540,11 +550,11 @@
 
     <section id="home" class="hero">
         <h1>ABIROL SPRITZ 2027</h1>
-        <p class="subtitle">Das EMMA-Herwegh-Gymnasium feiert bald ihr Abi!</p>
-        <a href="#" class="cta-button">Jetzt Tickets reservieren!</a>
+        <p class="subtitle">Das EMMA-Herwegh-Gymnasium feiert am 07.07.2027 ihr Abi!</p>
+        <a href="#" class="cta-button">Einen Spritz ausgeben!</a>
         
         <div class="countdown-container">
-            <div class="countdown-label">Countdown bis zum Abi</div>
+            <div class="countdown-label">Countdown bis zum Abiball!</div>
             <div class="countdown">
                 <div class="countdown-item">
                     <span class="countdown-number" id="days">0</span>
