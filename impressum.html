@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Abirol Spritz 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 165, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(255, 140, 0, 0.1);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            color: #FFB84D;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(255, 140, 0, 0.6),
+                         0 0 50px rgba(255, 140, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Content Section */
+        .content {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(120%);
+            -webkit-backdrop-filter: blur(20px) saturate(120%);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: clamp(30px, 6vw, 50px);
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #FFB84D;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            margin-bottom: 20px;
+            margin-top: 35px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 165, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        .info-block {
+            margin-bottom: 25px;
+        }
+
+        .info-block strong {
+            color: #FFB84D;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .info-block p {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 8px;
+            padding-left: 0;
+        }
+
+        .placeholder {
+            color: rgba(255, 165, 0, 0.7);
+            font-style: italic;
+            background: rgba(255, 165, 0, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        a {
+            color: #FFB84D;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #FFC870;
+            border-bottom: 1px solid #FFB84D;
+            text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 100, 0, 0.9));
+            color: #fff;
+            border: 2px solid rgba(255, 165, 0, 0.6);
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(255, 140, 0, 0.4),
+                        0 0 40px rgba(255, 140, 0, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 48px;
+            touch-action: manipulation;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 32px rgba(255, 140, 0, 0.6),
+                        0 0 60px rgba(255, 140, 0, 0.5);
+            background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 120, 0, 1));
+            border-color: rgba(255, 165, 0, 0.9);
+            border-bottom: 2px solid rgba(255, 165, 0, 0.9);
+        }
+
+        .back-button:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 165, 0, 0.2);
+        }
+
+        /* Note Section */
+        .note {
+            background: rgba(255, 165, 0, 0.08);
+            border-left: 4px solid #FFB84D;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .note strong {
+            color: #FFB84D;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .header {
+                padding: 20px 15px;
+                margin-bottom: 30px;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .header {
+                padding: 15px 12px;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            .back-button {
+                padding: 12px 24px;
+                width: 100%;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Impressum</h1>
+            <p class="subtitle">Angaben gemäß § 5 TMG</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Dienstanbieter -->
+            <h2>Dienstanbieter</h2>
+            <div class="info-block">
+                <p>Fabio Matteo Dragano</p>
+                <p>Verantwortlicher für das Projekt Abirol Spritz 2027</p>
+            </div>
+
+            <!-- Kontakt -->
+            <h2>Kontakt</h2>
+            <div class="info-block">
+                <strong>Anschrift:</strong>
+                <p>Ein Projekt des Abiturjahrgangs 2027 des EMMA-Herwegh-Gymnasiums</p>
+                <p>Morsbacher Str. 40</p>
+                <p>42857 Remscheid</p>
+            </div>
+
+            <div class="info-block">
+                <strong>Telefon:</strong>
+                <p>+49 17687927934</p>
+            </div>
+
+            <div class="info-block">
+                <strong>E-Mail:</strong>
+                <p><a href="mailto:f.dragano@emagym.de">f.dragano@emagym.de</a></p>
+            </div>
+
+            <!-- Redaktionell Verantwortlich -->
+            <h2>Redaktionell verantwortlich</h2>
+            <div class="info-block">
+                <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
+                <p>Fabio Matteo Dragano</p>
+                <p>Morsbacher Str. 40, 42857 Remscheid</p>
+            </div>
+
+            <!-- Haftungsausschluss -->
+            <h2>Haftungsausschluss</h2>
+            
+            <div class="info-block">
+                <strong>Haftung für Inhalte</strong>
+                <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+            </div>
+
+            <div class="info-block">
+                <strong>Haftung für Links</strong>
+                <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
+            </div>
+
+            <div class="info-block">
+                <strong>Urheberrecht</strong>
+                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+            </div>
+
+            <!-- Button Container -->
+            <div class="button-container">
+                <a href="index.html" class="back-button">← Zurück zur Startseite</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
