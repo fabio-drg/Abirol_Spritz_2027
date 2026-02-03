@@ -1,0 +1,34 @@
+[
+    {
+        "id": "abiball",
+        "name": "Abiball 2027",
+        "target": 15000,
+        "current": 8750,
+        "icon": "🎉",
+        "color": "#FFB84D"
+    },
+    {
+        "id": "abizeitung",
+        "name": "Abizeitung",
+        "target": 3000,
+        "current": 2100,
+        "icon": "📖",
+        "color": "#FF8C42"
+    },
+    {
+        "id": "abipullis",
+        "name": "Abipullis",
+        "target": 2500,
+        "current": 2500,
+        "icon": "👕",
+        "color": "#4CAF50"
+    },
+    {
+        "id": "mottowoche",
+        "name": "Mottowoche",
+        "target": 1500,
+        "current": 890,
+        "icon": "🎭",
+        "color": "#9C27B0"
+    }
+]

@@ -1,0 +1,322 @@
+[
+    {
+        "subject": "Biologie LK 1",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Carouge",
+        "color": "#4CAF50",
+        "block": "I"
+    },
+    {
+        "subject": "Biologie LK 1",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Carouge",
+        "color": "#4CAF50",
+        "block": "I"
+    },
+    {
+        "subject": "Deutsch LK 2",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Schwartenberg",
+        "color": "#2196F3",
+        "block": "I"
+    },
+    {
+        "subject": "Deutsch LK 2",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Schwartenberg",
+        "color": "#2196F3",
+        "block": "I"
+    },
+    {
+        "subject": "Englisch LK 2",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau August",
+        "color": "#FF9800",
+        "block": "I"
+    },
+    {
+        "subject": "Englisch LK 2",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau August",
+        "color": "#FF9800",
+        "block": "I"
+    },
+    {
+        "subject": "Mathematik LK 1",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Hoegen",
+        "color": "#FF5722",
+        "block": "I"
+    },
+    {
+        "subject": "Mathematik LK 1",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Hoegen",
+        "color": "#FF5722",
+        "block": "I"
+    },
+    {
+        "subject": "Pädagogik LK 1",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Krempel",
+        "color": "#E91E63",
+        "block": "I"
+    },
+    {
+        "subject": "Pädagogik LK 1",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Krempel",
+        "color": "#E91E63",
+        "block": "I"
+    },
+    {
+        "subject": "Sozialwissenschaften LK 1",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Herr Voss",
+        "color": "#9C27B0",
+        "block": "I"
+    },
+    {
+        "subject": "Sozialwissenschaften LK 1",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Herr Voss",
+        "color": "#9C27B0",
+        "block": "I"
+    },
+    {
+        "subject": "Erdkunde LK 2",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "AES",
+        "color": "#795548",
+        "block": "I"
+    },
+    {
+        "subject": "Erdkunde LK 2",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "AES",
+        "color": "#795548",
+        "block": "I"
+    },
+    {
+        "subject": "Geschichte LK 1",
+        "date": "2026-03-24",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "GBG",
+        "color": "#607D8B",
+        "block": "I"
+    },
+    {
+        "subject": "Geschichte LK 1",
+        "date": "2026-06-02",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "GBG",
+        "color": "#607D8B",
+        "block": "I"
+    },
+    {
+        "subject": "Deutsch LK 1",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau August",
+        "color": "#1976D2",
+        "block": "II"
+    },
+    {
+        "subject": "Deutsch LK 1",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau August",
+        "color": "#1976D2",
+        "block": "II"
+    },
+    {
+        "subject": "Englisch LK 1",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Behle",
+        "color": "#F57C00",
+        "block": "II"
+    },
+    {
+        "subject": "Englisch LK 1",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Behle",
+        "color": "#F57C00",
+        "block": "II"
+    },
+    {
+        "subject": "Erdkunde LK 1",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Herr Gräbner",
+        "color": "#689F38",
+        "block": "II"
+    },
+    {
+        "subject": "Erdkunde LK 1",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Herr Gräbner",
+        "color": "#689F38",
+        "block": "II"
+    },
+    {
+        "subject": "Physik LK 1",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Beckmann",
+        "color": "#0097A7",
+        "block": "II"
+    },
+    {
+        "subject": "Physik LK 1",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Frau Beckmann",
+        "color": "#0097A7",
+        "block": "II"
+    },
+    {
+        "subject": "Sport LK 1",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Herr Hoppe",
+        "color": "#C62828",
+        "block": "II"
+    },
+    {
+        "subject": "Sport LK 1",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "Herr Hoppe",
+        "color": "#C62828",
+        "block": "II"
+    },
+    {
+        "subject": "Biologie LK 2",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "GBG",
+        "color": "#388E3C",
+        "block": "II"
+    },
+    {
+        "subject": "Biologie LK 2",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "GBG",
+        "color": "#388E3C",
+        "block": "II"
+    },
+    {
+        "subject": "Deutsch LK 3",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "GBG",
+        "color": "#303F9F",
+        "block": "II"
+    },
+    {
+        "subject": "Deutsch LK 3",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "GBG",
+        "color": "#303F9F",
+        "block": "II"
+    },
+    {
+        "subject": "Mathematik LK 2",
+        "date": "2026-03-19",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "AES",
+        "color": "#D32F2F",
+        "block": "II"
+    },
+    {
+        "subject": "Mathematik LK 2",
+        "date": "2026-05-21",
+        "time": "1.-4. Std.",
+        "duration": "200",
+        "room": "",
+        "teacher": "AES",
+        "color": "#D32F2F",
+        "block": "II"
+    }
+]
