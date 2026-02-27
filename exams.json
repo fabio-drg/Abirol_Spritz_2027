@@ -318,5 +318,605 @@
         "teacher": "AES",
         "color": "#D32F2F",
         "block": "II"
+    },
+    {
+        "subject": "Englisch Gk 2",
+        "date": "2026-03-25",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Schwarzenberg",
+        "color": "#FF9800",
+        "block": "GK"
+    },
+    {
+        "subject": "Mathematik Gk 1",
+        "date": "2026-03-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Szlapa",
+        "color": "#FF5722",
+        "block": "GK"
+    },
+    {
+        "subject": "Pädagogik Gk 2",
+        "date": "2026-03-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Hoegen",
+        "color": "#E91E63",
+        "block": "GK"
+    },
+    {
+        "subject": "Biologie Gk 3",
+        "date": "2026-04-13",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Velioglu",
+        "color": "#4CAF50",
+        "block": "GK"
+    },
+    {
+        "subject": "Kunst Gk 2",
+        "date": "2026-04-13",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Haase",
+        "color": "#9C27B0",
+        "block": "GK"
+    },
+    {
+        "subject": "Chemie Gk 2",
+        "date": "2026-04-15",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Jungtow",
+        "color": "#00BCD4",
+        "block": "GK"
+    },
+    {
+        "subject": "Deutsch Gk 3",
+        "date": "2026-04-15",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Czernik",
+        "color": "#2196F3",
+        "block": "GK"
+    },
+    {
+        "subject": "Pädagogik Gk 1",
+        "date": "2026-04-15",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Gräbner",
+        "color": "#E91E63",
+        "block": "GK"
+    },
+    {
+        "subject": "Philosophie Gk 2",
+        "date": "2026-04-15",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Bucher",
+        "color": "#795548",
+        "block": "GK"
+    },
+    {
+        "subject": "Englisch Gk 3",
+        "date": "2026-04-17",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Eichhorn",
+        "color": "#FF9800",
+        "block": "GK"
+    },
+    {
+        "subject": "Physik Gk 1",
+        "date": "2026-04-17",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Rülling",
+        "color": "#0097A7",
+        "block": "GK"
+    },
+    {
+        "subject": "Deutsch Gk 1",
+        "date": "2026-04-20",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Donner",
+        "color": "#2196F3",
+        "block": "GK"
+    },
+    {
+        "subject": "Englisch Gk 1",
+        "date": "2026-04-20",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Eichhorn",
+        "color": "#FF9800",
+        "block": "GK"
+    },
+    {
+        "subject": "Erdkunde Gk 1",
+        "date": "2026-04-20",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Behle",
+        "color": "#689F38",
+        "block": "GK"
+    },
+    {
+        "subject": "Geschichte Gk 2",
+        "date": "2026-04-20",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Hoppe",
+        "color": "#607D8B",
+        "block": "GK"
+    },
+    {
+        "subject": "Biologie Gk 1",
+        "date": "2026-04-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Carouge",
+        "color": "#4CAF50",
+        "block": "GK"
+    },
+    {
+        "subject": "Deutsch Gk 2",
+        "date": "2026-04-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Czernik",
+        "color": "#2196F3",
+        "block": "GK"
+    },
+    {
+        "subject": "Französisch Gk 1",
+        "date": "2026-04-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Engels",
+        "color": "#3F51B5",
+        "block": "GK"
+    },
+    {
+        "subject": "Latein Gk 1",
+        "date": "2026-04-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Guha",
+        "color": "#FF7043",
+        "block": "GK"
+    },
+    {
+        "subject": "Sozialwissenschaften Gk",
+        "date": "2026-04-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Schaefers",
+        "color": "#9C27B0",
+        "block": "GK"
+    },
+    {
+        "subject": "Chemie Gk 1",
+        "date": "2026-04-24",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Jungtow",
+        "color": "#00BCD4",
+        "block": "GK"
+    },
+    {
+        "subject": "Evangelische Religion",
+        "date": "2026-04-24",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Martin",
+        "color": "#8BC34A",
+        "block": "GK"
+    },
+    {
+        "subject": "Mathematik Gk 3",
+        "date": "2026-04-24",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Dziwisch",
+        "color": "#FF5722",
+        "block": "GK"
+    },
+    {
+        "subject": "Biologie Gk 2",
+        "date": "2026-04-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Borgolte",
+        "color": "#4CAF50",
+        "block": "GK"
+    },
+    {
+        "subject": "Chinesisch Gk 1",
+        "date": "2026-04-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Czernik",
+        "color": "#F44336",
+        "block": "GK"
+    },
+    {
+        "subject": "Geschichte Gk 1",
+        "date": "2026-04-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Finkler",
+        "color": "#607D8B",
+        "block": "GK"
+    },
+    {
+        "subject": "Mathematik Gk 2",
+        "date": "2026-04-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Römer",
+        "color": "#FF5722",
+        "block": "GK"
+    },
+    {
+        "subject": "Spanisch Gk 1",
+        "date": "2026-04-27",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau del Valle",
+        "color": "#FFB300",
+        "block": "GK"
+    },
+    {
+        "subject": "Sozialwissenschaften Gk",
+        "date": "2026-04-29",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Voß",
+        "color": "#9C27B0",
+        "block": "GK"
+    },
+    {
+        "subject": "Spanisch Gk 1 (Mündlich)",
+        "date": "2026-04-29",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Finkler",
+        "color": "#FFB300",
+        "block": "GK"
+    },
+    {
+        "subject": "Englisch Gk 2",
+        "date": "2026-06-03",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Schwarzenberg",
+        "color": "#FF9800",
+        "block": "GK"
+    },
+    {
+        "subject": "Biologie Gk 3",
+        "date": "2026-06-08",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Velioglu",
+        "color": "#4CAF50",
+        "block": "GK"
+    },
+    {
+        "subject": "Kunst Gk 2",
+        "date": "2026-06-08",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Haase",
+        "color": "#9C27B0",
+        "block": "GK"
+    },
+    {
+        "subject": "Chemie Gk 2",
+        "date": "2026-06-10",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Jungtow",
+        "color": "#00BCD4",
+        "block": "GK"
+    },
+    {
+        "subject": "Deutsch Gk 3",
+        "date": "2026-06-10",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Czernik",
+        "color": "#2196F3",
+        "block": "GK"
+    },
+    {
+        "subject": "Pädagogik Gk 1",
+        "date": "2026-06-10",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Gräbner",
+        "color": "#E91E63",
+        "block": "GK"
+    },
+    {
+        "subject": "Philosophie Gk 2",
+        "date": "2026-06-10",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Bucher",
+        "color": "#795548",
+        "block": "GK"
+    },
+    {
+        "subject": "Mathematik Gk 1",
+        "date": "2026-06-12",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Szlapa",
+        "color": "#FF5722",
+        "block": "GK"
+    },
+    {
+        "subject": "Pädagogik Gk 2",
+        "date": "2026-06-12",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Hoegen",
+        "color": "#E91E63",
+        "block": "GK"
+    },
+    {
+        "subject": "Deutsch Gk 1",
+        "date": "2026-06-15",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Donner",
+        "color": "#2196F3",
+        "block": "GK"
+    },
+    {
+        "subject": "Englisch Gk 1",
+        "date": "2026-06-15",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Eichhorn",
+        "color": "#FF9800",
+        "block": "GK"
+    },
+    {
+        "subject": "Erdkunde Gk 1",
+        "date": "2026-06-15",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Behle",
+        "color": "#689F38",
+        "block": "GK"
+    },
+    {
+        "subject": "Geschichte Gk 2",
+        "date": "2026-06-15",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Hoppe",
+        "color": "#607D8B",
+        "block": "GK"
+    },
+    {
+        "subject": "Biologie Gk 1",
+        "date": "2026-06-17",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Carouge",
+        "color": "#4CAF50",
+        "block": "GK"
+    },
+    {
+        "subject": "Deutsch Gk 2",
+        "date": "2026-06-17",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Czernik",
+        "color": "#2196F3",
+        "block": "GK"
+    },
+    {
+        "subject": "Französisch Gk 1",
+        "date": "2026-06-17",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Engels",
+        "color": "#3F51B5",
+        "block": "GK"
+    },
+    {
+        "subject": "Latein Gk 1",
+        "date": "2026-06-17",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Guha",
+        "color": "#FF7043",
+        "block": "GK"
+    },
+    {
+        "subject": "Sozialwissenschaften Gk",
+        "date": "2026-06-17",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Schaefers",
+        "color": "#9C27B0",
+        "block": "GK"
+    },
+    {
+        "subject": "Englisch Gk 3",
+        "date": "2026-06-19",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Eichhorn",
+        "color": "#FF9800",
+        "block": "GK"
+    },
+    {
+        "subject": "Physik Gk 1",
+        "date": "2026-06-19",
+        "time": "5.-7. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Rülling",
+        "color": "#0097A7",
+        "block": "GK"
+    },
+    {
+        "subject": "Biologie Gk 2",
+        "date": "2026-06-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Borgolte",
+        "color": "#4CAF50",
+        "block": "GK"
+    },
+    {
+        "subject": "Chinesisch Gk 1",
+        "date": "2026-06-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Czernik",
+        "color": "#F44336",
+        "block": "GK"
+    },
+    {
+        "subject": "Geschichte Gk 1",
+        "date": "2026-06-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Finkler",
+        "color": "#607D8B",
+        "block": "GK"
+    },
+    {
+        "subject": "Mathematik Gk 2",
+        "date": "2026-06-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Römer",
+        "color": "#FF5722",
+        "block": "GK"
+    },
+    {
+        "subject": "Spanisch Gk 1",
+        "date": "2026-06-22",
+        "time": "1.-3. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau del Valle",
+        "color": "#FFB300",
+        "block": "GK"
+    },
+    {
+        "subject": "Sozialwissenschaften Gk",
+        "date": "2026-06-24",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Herr Voß",
+        "color": "#9C27B0",
+        "block": "GK"
+    },
+    {
+        "subject": "Spanisch Gk 1",
+        "date": "2026-06-24",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Finkler",
+        "color": "#FFB300",
+        "block": "GK"
+    },
+    {
+        "subject": "Chemie Gk 1",
+        "date": "2026-06-26",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Jungtow",
+        "color": "#00BCD4",
+        "block": "GK"
+    },
+    {
+        "subject": "Evangelische Religion",
+        "date": "2026-06-26",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Martin",
+        "color": "#8BC34A",
+        "block": "GK"
+    },
+    {
+        "subject": "Mathematik Gk 3",
+        "date": "2026-06-26",
+        "time": "3.-5. Std.",
+        "duration": "",
+        "room": "",
+        "teacher": "Frau Dziwisch",
+        "color": "#FF5722",
+        "block": "GK"
     }
 ]

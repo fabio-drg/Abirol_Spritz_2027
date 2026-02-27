@@ -815,25 +815,93 @@
             filter: brightness(1.05) contrast(1.1);
         }
 
+        /* ===== HAMBURGER MENU ===== */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 19px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            flex-shrink: 0;
+        }
+        .nav-hamburger span {
+            display: block;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
         /* ===== MOBILE OPTIMIERUNGEN ===== */
         @media (max-width: 768px) {
-            nav {
-                top: 8px;
-                padding: 6px 12px;
-                max-width: 98%;
-                font-size: 0;
-                border-radius: 40px;
+            /* iOS fix: background-attachment: fixed not supported on iOS Safari */
+            .hero, .content-section, .finance-section {
+                background-attachment: scroll;
             }
 
-            nav a {
-                margin: 0 4px;
-                padding: 10px 14px;
-                font-size: 0.75rem;
-                letter-spacing: 0.5px;
-                min-height: 44px;
-                display: inline-flex;
+            nav {
+                top: 8px;
+                padding: 8px 14px;
+                max-width: 98%;
+                border-radius: 40px;
+                display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .nav-hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 58px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(18, 18, 18, 0.97);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
+                border: 1px solid rgba(255, 165, 0, 0.35);
+                border-radius: 16px;
+                padding: 10px;
+                min-width: 220px;
+                width: min(90vw, 300px);
+                z-index: 999;
+                flex-direction: column;
+                gap: 4px;
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+                animation: fadeInDown 0.2s ease-out;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block !important;
+                margin: 0 !important;
+                padding: 12px 18px !important;
+                font-size: 0.9rem !important;
+                letter-spacing: 0.8px;
+                text-align: center;
+                border-radius: 10px;
+                min-height: 44px;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links a:hover,
+            .nav-links a:active {
+                background: rgba(255, 165, 0, 0.15);
             }
 
             /* Entferne Hover-Effekte auf Mobile */
@@ -952,9 +1020,14 @@
             }
 
             /* Kalender Filter Grid - Mobile */
-            #kalender .animate-on-scroll > div > div[style*="grid-template-columns"] {
-                grid-template-columns: 1fr !important;
+            #kalenderFilterGrid {
+                grid-template-columns: 1fr 1fr !important;
                 gap: 12px;
+            }
+
+            /* Q1 Infobox Grid */
+            #q1InfoGrid {
+                grid-template-columns: 1fr 1fr !important;
             }
 
             /* Optimiere Buttons für Touch */
@@ -1006,15 +1079,17 @@
         @media (max-width: 480px) {
             /* Noch kompaktere Navigation */
             nav {
-                padding: 5px 8px;
+                padding: 8px 12px;
                 top: 5px;
             }
 
-            nav a {
-                margin: 0 3px;
-                padding: 8px 10px;
-                font-size: 0.7rem;
-                letter-spacing: 0.3px;
+            /* Filter grid 1 column on very small screens */
+            #kalenderFilterGrid {
+                grid-template-columns: 1fr !important;
+            }
+
+            #q1InfoGrid {
+                grid-template-columns: 1fr !important;
             }
 
             h1 {
@@ -1867,16 +1942,21 @@
 </head>
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#finanzen">Finanzen</a>
-        <a href="#kalender">Klausurkalender</a>
-        <a href="#punktesystem">Punktesystem</a>
-        <a href="#aktionen">Aktionen</a>
-        <a href="#merch">Merch & Abibuch</a>
-        <a href="#links">Links</a>
-        <a href="impressum.html" target="_blank" style="display: none;" class="impressum-link">Impressum</a>
+    <nav id="mainNav">
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#finanzen">Finanzen</a>
+            <a href="#kalender">Klausurkalender</a>
+            <a href="#punktesystem">Punktesystem</a>
+            <a href="#aktionen">Aktionen</a>
+            <a href="#merch">Merch &amp; Abibuch</a>
+            <a href="#links">Links</a>
+            <a href="impressum.html" target="_blank" style="display: none;" class="impressum-link">Impressum</a>
+        </div>
     </nav>
 
     <section id="home" class="hero">
@@ -1982,11 +2062,34 @@
     <section id="kalender" class="content-section hidden">
         <h2 class="animate-on-scroll fade-in-down" style="color: #FFB84D; margin-bottom: 20px; text-shadow: 0 0 30px rgba(255, 140, 0, 0.6);">📅 Klausurkalender</h2>
         <p class="animate-on-scroll fade-in-up" style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; font-size: 1.05rem;">Alle wichtigen Klausurtermine im Überblick</p>
+
+        <!-- Q1 Wichtige Termine -->
+        <div class="animate-on-scroll fade-in-up" style="max-width: 1200px; margin: 0 auto 30px auto; background: linear-gradient(135deg, rgba(255, 165, 0, 0.12), rgba(255, 100, 0, 0.06)); border: 1px solid rgba(255, 165, 0, 0.4); border-radius: 14px; padding: 22px 28px;">
+            <h3 style="color: #FFB84D; margin-bottom: 16px; font-size: 1.1rem;">📌 Wichtige Termine Q1</h3>
+            <div id="q1InfoGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;">
+                <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 12px 16px;">
+                    <span style="color: rgba(255,255,255,0.55); font-size: 0.82rem; display: block; margin-bottom: 4px;">✏️ Nachschreibtermine Q1</span>
+                    <span style="color: #fff; font-weight: 600;">Sa., 25.04.2026 &amp; Sa., 27.06.2026</span>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 12px 16px;">
+                    <span style="color: rgba(255,255,255,0.55); font-size: 0.82rem; display: block; margin-bottom: 4px;">📝 Notenschluss Q1</span>
+                    <span style="color: #fff; font-weight: 600;">Fr., 03.07.2026</span>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 12px 16px;">
+                    <span style="color: rgba(255,255,255,0.55); font-size: 0.82rem; display: block; margin-bottom: 4px;">🏫 Notenkonferenz Q1</span>
+                    <span style="color: #fff; font-weight: 600;">Mi., 08.07.2026</span>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 12px 16px;">
+                    <span style="color: rgba(255,255,255,0.55); font-size: 0.82rem; display: block; margin-bottom: 4px;">📋 Ausgabe Schullaufbahnbescheinigung Q1</span>
+                    <span style="color: #fff; font-weight: 600;">Fr., 17.07.2026</span>
+                </div>
+            </div>
+        </div>
         
         <div class="animate-on-scroll scale-in" style="max-width: 1200px; margin: 0 auto;">
             <!-- Filter & Suche -->
             <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 165, 0, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 30px;">
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                <div id="kalenderFilterGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
                     <div>
                         <label style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; display: block; margin-bottom: 8px;">🔍 Suche</label>
                         <input type="text" id="examSearch" placeholder="z.B. Mathematik..." style="width: 100%; padding: 10px 15px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 165, 0, 0.4); border-radius: 8px; color: white; font-size: 0.95rem; box-sizing: border-box;" />
@@ -1997,8 +2100,28 @@
                             <option value="all">Alle Termine</option>
                             <option value="2026-03-19">19. März 2026</option>
                             <option value="2026-03-24">24. März 2026</option>
+                            <option value="2026-03-25">25. März 2026</option>
+                            <option value="2026-03-27">27. März 2026</option>
+                            <option value="2026-04-13">13. April 2026</option>
+                            <option value="2026-04-15">15. April 2026</option>
+                            <option value="2026-04-17">17. April 2026</option>
+                            <option value="2026-04-20">20. April 2026</option>
+                            <option value="2026-04-22">22. April 2026</option>
+                            <option value="2026-04-24">24. April 2026</option>
+                            <option value="2026-04-27">27. April 2026</option>
+                            <option value="2026-04-29">29. April 2026</option>
                             <option value="2026-05-21">21. Mai 2026</option>
                             <option value="2026-06-02">2. Juni 2026</option>
+                            <option value="2026-06-03">3. Juni 2026</option>
+                            <option value="2026-06-08">8. Juni 2026</option>
+                            <option value="2026-06-10">10. Juni 2026</option>
+                            <option value="2026-06-12">12. Juni 2026</option>
+                            <option value="2026-06-15">15. Juni 2026</option>
+                            <option value="2026-06-17">17. Juni 2026</option>
+                            <option value="2026-06-19">19. Juni 2026</option>
+                            <option value="2026-06-22">22. Juni 2026</option>
+                            <option value="2026-06-24">24. Juni 2026</option>
+                            <option value="2026-06-26">26. Juni 2026</option>
                         </select>
                     </div>
                     <div>
@@ -2956,6 +3079,40 @@
             }
 
             renderSponsors();
+        })();
+
+        // ========================================
+        // HAMBURGER MENÜ
+        // ========================================
+        (function(){
+            const hamburger = document.getElementById('navHamburger');
+            const navLinks  = document.getElementById('navLinks');
+            if (!hamburger || !navLinks) return;
+
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('open');
+            }
+
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isOpen = navLinks.classList.toggle('open');
+                hamburger.classList.toggle('active', isOpen);
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', closeMenu);
+            });
+
+            // Close menu on outside click
+            document.addEventListener('click', function(e) {
+                if (!document.getElementById('mainNav').contains(e.target)) {
+                    closeMenu();
+                }
+            });
         })();
 
         // Simple view switcher: show target section, hide others
